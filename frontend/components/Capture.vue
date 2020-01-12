@@ -92,11 +92,25 @@
 
         const base64 = canvas.toDataURL();
         const finalImage = base64.replace("data:image/png;base64,", "");
-        this.data.requests[0].image.content = finalImage;
 
-        axios.post(`https://vision.googleapis.com/v1/images:annotate?key=0baa14b1af5ce219804aafa4a7fe6e18ae2b11d4`,
+        /*
+        axios.post(`https://vision.googleapis.com/v1/images:annotate?key=AIzaSyDgcSJUpJdAJpR-BAPSEgJU8er57esot2w`,
           this.data).then(response => {
+          console.log(response);
+        }).catch(error => {
+          console.log(error);
+        })
+        */
+
+
+        axios.post(`https://vision.googleapis.com/v1/images:annotate?key=AIzaSyDgcSJUpJdAJpR-BAPSEgJU8er57esot2w`,
+          this.data).then(response => {
+
+            const result = response.data.responses[0];
+            console.log(result);
+          /*
           const result = response.data.responses[0].faceAnnotations[0];
+
           vm.anger = result.angerLikelihood;
           vm.blur = result.blurredLikelihood;
           vm.headwear = result.headwearLikelihood;
@@ -106,9 +120,17 @@
           vm.confidence = this.confidenceInt(result.detectionConfidence);
           vm.loader = false;
           vm.result = true;
+
+
+           */
+
+
         }).catch(error => {
           console.log(error);
         })
+
+
+        this.data.requests[0].image.content = finalImage;
       },
       confidenceInt(num){
         const dig = num.toFixed(2);
