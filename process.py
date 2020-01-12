@@ -42,7 +42,8 @@ def processLabels(labels):
 
 
 def generatePacket(label, action):
-    google_search("Coffee")
+    # google_search("Coffee")
+    # Google search doesnt work :((((((
 
     return jsonify(label, action)
 
