@@ -16,7 +16,7 @@ def receiveLabels():
     if request.method != 'POST':
         return jsonify("Payload failed")
 
-    return jsonify(processLabels(request.data))
+    return processLabels(request.data)
 
 
 @app.route('/labellist')

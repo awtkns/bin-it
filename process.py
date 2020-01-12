@@ -1,3 +1,4 @@
+from flask import jsonify
 import os
 import pandas as pd
 import json
@@ -20,16 +21,22 @@ config = {
 }
 firebase = pyrebase.initialize_app(config)
 
+
 def processLabels(labels):
 
     # Process labels
-    for label in json.loads(labels)['payload']:
+    labels = json.loads(labels)['payload']
+    for label in labels:
         actions = data.loc[data['Item'].str.match(label['description'])]['Action'].values
         if actions.size > 0:
             addToDB(label['description'], "hits")
-            return actions[0]
-    addToDB(label['description'], "mishits")
-    return "Landfill"
+            return generatePacket(label['description'], actions[0])
+
+    addToDB(labels[0]['description'], "mishits")
+    return generatePacket(labels[0]['description'], "Unsure")
+
+def generatePacket(label, action):
+    return jsonify(label, action)
 
 
 def addToDB(label, table):
