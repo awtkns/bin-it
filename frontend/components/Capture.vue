@@ -5,6 +5,7 @@
         <!-- logo -->
         <v-card-actions class="justify-center">
           <custom-logo></custom-logo>
+          <stats/>
         </v-card-actions>
 
         <div class="text-center">
@@ -62,8 +63,9 @@
   import axios from 'axios';
   import CustomLogo from "./CustomLogo";
   import InfoCard from "./InfoCard";
+  import Stats from "./Stats";
   export default {
-    components: {InfoCard, CustomLogo},
+    components: {Stats, InfoCard, CustomLogo},
     data(){
 
       return{

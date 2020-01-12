@@ -38,5 +38,18 @@ def addToDB(label, table):
     db.child(table).push(dbData)
 
 
+def getList():
+    db = firebase.database()
+    data = db.child('hits').get().val()
+
+    labels = []
+    for label in data.values():
+        labels.append(list(label.values())[0])
+
+    return list(labels)
+
+
+
+#
 # if __name__ == '__main__':
-#     processData()
+#     getList()
