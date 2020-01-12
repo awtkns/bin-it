@@ -5,7 +5,7 @@
       <custom-logo></custom-logo>
 
         <div class="text-center">
-          <canvas id="canvas" width="100%" height="50%" style="display:none;"/>
+          <canvas id="canvas" width="1280" height="960" style="display:none;"/>
           <video id="video" width="100%" height="50%" autoplay/>
 
           <v-overlay :absolute="absolute" :value="overlay">
@@ -100,7 +100,7 @@
 
         this.result = false;
         this.loader = true;
-        context.drawImage(video, 0, 0, 640, 480);
+        context.drawImage(video, 0, 0, 1280, 960);
 
         const base64 = canvas.toDataURL();
         const finalImage = base64.replace("data:image/png;base64,", "");
