@@ -1,6 +1,6 @@
 <template>
   <v-card color="white" class="mx-auto" max-width="344" elevation="2">
-    <div style="color:black;">
+    <div style="color:black;text-align: left;">
       <v-card-text >
         <h1>
           <v-icon color="black" left>mdi-recycle</v-icon>
@@ -29,7 +29,7 @@
       </v-card-text>
 
       <v-card-actions>
-        <v-btn to="/" color="primary" block>
+        <v-btn to="/" color="white" block rounded style="padding: 25px; color:black;">
           Back to home
         </v-btn>
       </v-card-actions>
