@@ -1,55 +1,108 @@
 <template>
   <v-layout row wrap>
     <v-container grid-list-xl>
-      <v-card>
+      <v-card height="550px">
 <!--        <stats />-->
         <div class="text-center">
           <canvas id="canvas" width="1280" height="960" style="display:none;"/>
-          <video id="video" width="100%" height="50%" autoplay/>
+          <!--<video id="video" autoplay style="position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;"/>-->
+          <div style="position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;">
+            <div>
+              <video id="video" autoplay style="min-width: 100%;
+                                                min-height: 100%;
+                                                width: auto;
+                                                height: auto;
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                transform: translate(-50%, -50%);"/>
+            </div>
+          </div>
 
           <v-overlay :absolute="absolute" :value="overlay">
-            <InfoCard></InfoCard>
-            <v-btn color="success" @click="overlay = false" block>
-              Scan Again
+            <!--<InfoCard></InfoCard>-->
+            <v-card color="white" class="mx-auto" max-width="344" elevation="2">
+              <div style="color:black;text-align: left;">
+                <v-card-text >
+                  <h1>
+                    <v-icon color="black" left>mdi-recycle</v-icon>
+                    Recycle it!
+                  </h1>
+                  <br>
+                  <p>
+                    Plastic Bottles are recyclable in blue bins.
+                  </p>
+                </v-card-text>
+                <v-card-text>
+                  <h2>How to Reuse it?</h2>
+                  <br>
+                  <p>
+                    Plastic Bottles are recyclable in blue bins.
+                  </p>
+                </v-card-text>
+
+                <v-card-text>
+                  <h2>Whats the Impact?</h2>
+                  <br>
+                  <p>
+                    In addition to reducing greenhouse gas emissions, recycling plastic water bottles also helps to decrease the amount of pollution in the air and water sources.
+                  </p>
+                </v-card-text>
+
+                <v-card-actions>
+                  <v-btn to="/" block rounded style="padding: 25px; color:cornflowerblue;" outlined color="primary">
+                    Back to home
+                  </v-btn>
+                </v-card-actions>
+
+                <v-card-actions>
+                  <v-btn color="primary" @click="overlay=false" block rounded style="padding: 25px;">
+                    Scan Again
+                  </v-btn>
+                </v-card-actions>
+                <!--
+              <v-card-actions>
+
+              </v-card-actions>
+              -->
+              </div>
+            </v-card>
+
+          </v-overlay>
+
+          <v-card-actions class="justify-center" row wrap  align-end style="height: 475px;">
+
+          </v-card-actions>
+
+          <v-card-actions class="justify-center" row wrap  align-end>
+            <v-btn href="/" rounded>
+              <v-icon dark left>mdi-arrow-left</v-icon>
             </v-btn>
-          </v-overlay>
 
-
-          <!--
-          <v-overlay :absolute="absolute" :value="overlay">
-            <InfoCard></InfoCard>
-          </v-overlay>
-          -->
+            <v-btn @click.native="process" color="primary" rounded>
+              <v-icon center>mdi-camera</v-icon>
+            </v-btn>
+          </v-card-actions>
         </div>
 
-        <v-btn @click.native="process" color="primary" block>Click to Scan</v-btn>
-        <v-btn color="success" @click="overlay = !overlay" block>
+        <!--<v-btn color="success" @click="overlay = !overlay" block>
           Show Overlay
-        </v-btn>
+        </v-btn>-->
       </v-card>
     </v-container>
 
     <!--<v-icon left></v-icon> Analyze</v-btn>-->
     <!--<h4 class="red--text">You should: {{resultText}} it!</h4>-->
   </v-layout>
-  <!--
-  <v-layout row wrap>
-    <v-flex xs12 sm12 md6 lg6 xl6>
-      <v-card>
-        <video id="video" width="100%" height="50%" autoplay></video>
-      </v-card>
-
-      <canvas id="canvas" width="200%" height="50%"></canvas>
-      <v-btn @click.native="process" block secondary dark>Analyze</v-btn>
-
-    </v-flex>
-    <v-flex xs12 sm12 md6 lg6 xl6>
-      <h2 class="orange--text text-xs-center">Result</h2>
-      <h4 class="red--text">You should: {{resultText}} it!</h4>
-      <h4>I see...</h4>
-    </v-flex>
-  </v-layout>
-  -->
 </template>
 
 <script>
@@ -57,15 +110,16 @@
   import axios from 'axios';
   import InfoCard from "./InfoCard";
   import Stats from "./Stats";
+  import CustomLogo from "./CustomLogo";
   export default {
-    components: {Stats, InfoCard},
+    components: {CustomLogo, Stats, InfoCard},
     data(){
-
       return{
         absolute: true,
         overlay: false,
         loader: false,
         result: false,
+        initialized: false,
         resultText: null,
         data: {               //type vision api Request
           "requests": [{
@@ -85,10 +139,18 @@
         const context = canvas.getContext('2d');
         const video = document.getElementById('video');
 
+        if(this.initialized == false)
+        {
+          this.initialized = true;
+        }
+        else {
+          this.overlay = !this.overlay;
+        }
+
         const constraints = {
           video: true,
+          facingMode: { exact: "environment" },
         };
-
 
         // Attach the video stream to the video element and autoplay.
         navigator.mediaDevices.getUserMedia(constraints)
@@ -103,19 +165,9 @@
         const base64 = canvas.toDataURL();
         const finalImage = base64.replace("data:image/png;base64,", "");
 
-        /*
-        axios.post(`https://vision.googleapis.com/v1/images:annotate?key=AIzaSyDgcSJUpJdAJpR-BAPSEgJU8er57esot2w`,
-          this.data).then(response => {
-          console.log(response);
-        }).catch(error => {
-          console.log(error);
-        })
-        */
-
 
         axios.post(`https://vision.googleapis.com/v1/images:annotate?key=AIzaSyDgcSJUpJdAJpR-BAPSEgJU8er57esot2w`,
           this.data).then(response => {
-
             const result = response.data.responses[0];
             console.log(result);
 
@@ -129,29 +181,6 @@
               console.log(action)
               this.resultText = action.data;
             })
-
-
-            /*
-            const result = response.data.responses[0];
-            console.log(result);
-            */
-          /*
-          const result = response.data.responses[0].faceAnnotations[0];
-
-          vm.anger = result.angerLikelihood;
-          vm.blur = result.blurredLikelihood;
-          vm.headwear = result.headwearLikelihood;
-          vm.joy = result.joyLikelihood;
-          vm.sorrow = result.sorrowLikelihood;
-          vm.surprised = result.surpriseLikelihood;
-          vm.confidence = this.confidenceInt(result.detectionConfidence);
-          vm.loader = false;
-          vm.result = true;
-*/
-
-
-
-
         }).catch(error => {
           console.log(error);
         })

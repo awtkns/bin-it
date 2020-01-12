@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-btn href="/"><</v-btn>
+    <v-btn block href="/"><</v-btn>
   </v-row>
 </template>
 
