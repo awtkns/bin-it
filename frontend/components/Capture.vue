@@ -7,37 +7,32 @@
           <custom-logo></custom-logo>
         </v-card-actions>
 
-        <!-- Home page introduction -->
-        <v-card-actions class="justify-center">
-          <h1>Bin it</h1>
-        </v-card-actions>
-        <v-card-actions class="justify-center" style="text-align:center;">
-          <p>Have an item you want to throw out? Not sure which bin it goes in? Find out in 1, 2, 3!</p>
-        </v-card-actions>
-      </v-card>
+        <div class="text-center">
+          <canvas id="canvas" width="100%" height="50%" style="display:none;"/>
+          <video id="video" width="100%" height="50%" autoplay/>
 
-      <!-- Steps -->
-      <v-card>
-        <v-card-actions class="justify-center">
-          <h3>1. Hold your item</h3>
-        </v-card-actions>
-        <v-card-actions class="justify-center">
-          <h3>2. Wait for the scan</h3>
-        </v-card-actions>
-        <v-card-actions class="justify-center">
-          <h3>3. Know where to throw</h3>
-        </v-card-actions>
-        <v-card-actions class="justify-center" style="text-align:center;">
-          <p>Learn about the impact your making!</p>
-        </v-card-actions>
+          <v-overlay :absolute="absolute" :value="overlay">
+            <InfoCard></InfoCard>
+            <v-btn color="success" @click="overlay = false" block>
+              Scan Again
+            </v-btn>
+          </v-overlay>
+
+
+          <!--
+          <v-overlay :absolute="absolute" :value="overlay">
+            <InfoCard></InfoCard>
+          </v-overlay>
+          -->
+        </div>
+
+        <v-btn @click.native="process" color="primary" block>Click to Scan</v-btn>
+        <v-btn color="success" @click="overlay = !overlay" block>
+          Show Overlay
+        </v-btn>
       </v-card>
     </v-container>
 
-
-    <canvas id="canvas" width="100%%" height="50%" style="display:none;"/>
-    <video id="video" width="100%" height="50%" autoplay/>
-
-    <v-btn @click.native="process" block secondary dark>Click to Scan</v-btn>
     <!--<v-icon left></v-icon> Analyze</v-btn>-->
     <!--<h4 class="red--text">You should: {{resultText}} it!</h4>-->
   </v-layout>
@@ -66,10 +61,14 @@
   //import $ from "jquery";
   import axios from 'axios';
   import CustomLogo from "./CustomLogo";
+  import InfoCard from "./InfoCard";
   export default {
-    components: {CustomLogo},
+    components: {InfoCard, CustomLogo},
     data(){
+
       return{
+        absolute: true,
+        overlay: false,
         loader: false,
         result: false,
         resultText: null,
@@ -161,7 +160,6 @@
         }).catch(error => {
           console.log(error);
         })
-
 
         this.data.requests[0].image.content = finalImage;
       },

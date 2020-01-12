@@ -8,9 +8,6 @@
         </v-card-actions>
 
         <!-- Home page introduction -->
-        <v-card-actions class="justify-center">
-          <h1>Bin it</h1>
-        </v-card-actions>
         <v-card-actions class="justify-center" style="text-align:center;">
           <p>Have an item you want to throw out? Not sure which bin it goes in? Find out in 1, 2, 3!</p>
         </v-card-actions>
@@ -30,9 +27,19 @@
         <v-card-actions class="justify-center" style="text-align:center;">
           <p>Learn about the impact your making!</p>
         </v-card-actions>
+
+        <div style="padding: 25px;">
+          <v-btn to="scan" class="ma-2" color="primary" block>
+            <!--<v-icon class="material-icons">
+              mdi-camera
+            </v-icon>
+            -->
+            <v-icon dark left>mdi-camera</v-icon>
+            Scan Object
+          </v-btn>
+        </div>
       </v-card>
     </v-container>
-    <v-btn to="scan" block secondary dark>Scan Object</v-btn>
     <!--<v-btn @click.native="process" block secondary dark><a href="pages/scan.vue">Scan Object</a></v-btn>-->
     <!--<v-icon left></v-icon> Analyze</v-btn>-->
     <!--<h4 class="red--text">You should: {{resultText}} it!</h4>-->

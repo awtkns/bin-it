@@ -1,5 +1,5 @@
 <template>
-  <div>SCANs</div>
+  <Capture></Capture>
 </template>
 
 <script>
