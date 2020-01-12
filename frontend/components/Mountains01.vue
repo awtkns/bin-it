@@ -1,6 +1,6 @@
 <template>
     <div>
-      <svg width="360" height="278" viewBox="0 0 360 278" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <svg width="100%" height="auto" viewBox="0 0 360 278" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <rect opacity="0.6" width="360" height="114" transform="matrix(-1 0 0 1 360 31)" fill="url(#pattern0)"/>
         <rect y="137" width="360" height="141" fill="#66B79F"/>
         <g clip-path="url(#clip0)">

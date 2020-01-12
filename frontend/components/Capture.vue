@@ -24,6 +24,20 @@
                                                 top: 50%;
                                                 left: 50%;
                                                 transform: translate(-50%, -50%);"/>
+              <script>
+                const video = document.getElementById('video');
+
+                const constraints = {
+                  video: true,
+                  facingMode: { exact: "environment" },
+                };
+
+                // Attach the video stream to the video element and autoplay.
+                navigator.mediaDevices.getUserMedia(constraints)
+                  .then((stream) => {
+                    video.srcObject = stream;
+                  });
+              </script>
             </div>
           </div>
 
@@ -138,13 +152,7 @@
         const context = canvas.getContext('2d');
         const video = document.getElementById('video');
 
-        if(this.initialized == false)
-        {
-          this.initialized = true;
-        }
-        else {
-          this.overlay = !this.overlay;
-        }
+        this.overlay = !this.overlay;
 
         const constraints = {
           video: true,

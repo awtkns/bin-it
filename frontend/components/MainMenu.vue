@@ -19,7 +19,6 @@
       </div>
 
       <v-card-actions class="justify-center"><Mountains01></Mountains01></v-card-actions>
-
       <div class="scan-btn-container">
         <v-btn to="scan" color="primary" block style="padding: 25px;">
           <v-icon dark left>mdi-camera</v-icon>
