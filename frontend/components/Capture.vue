@@ -28,12 +28,7 @@
         <v-progress-circular indeterminate v-bind:size="100" v-bind:width="3" class="teal--text"></v-progress-circular>
       </div>
       <div v-show="result" class="text-md-center">
-        <p>Anger: <span class="blue--text">{{anger}}</span></p>
-        <p>Blurred: <span class="blue--text"> {{blur}}</span></p>
-        <p>Joy: <span class="blue--text">  {{joy}} </span> </p>
-        <p>Sorrow: <span class="blue--text">  {{sorrow}} </span> </p>
-        <p>Surprised: <span class="blue--text">  {{surprised}} </span> </p>
-        <h4 class="red--text">Confidence: {{ confidence }} %</h4>
+        <h4 class="red--text">You should: {{ resultText }} it!%</h4>
       </div>
     </v-flex>
   </v-layout>
@@ -48,14 +43,7 @@
       return{
         loader: false,
         result: false,
-        apiKey: "",  //google cloud api  Browser key
-        anger: null,
-        blur: null,
-        headwear: null,
-        sorrow: null,
-        joy: null,
-        surprised: null,
-        confidence: null,
+        resultText: null,
         data: {               //type vision api Request
           "requests": [{
             "features": [{
@@ -112,6 +100,13 @@
             //const [result] = await client.labelDetection('./resources/wakeupcat.jpg');
             const labels = result.labelAnnotations;
             console.log(labels);
+
+            axios.post('http://127.0.0.1:5000/image', {
+              payload: labels
+            }).then(action => {
+              console.log(action)
+              this.resultText = action.data;
+            })
 
 
             /*
