@@ -8,6 +8,26 @@ from google.cloud.vision import types
 
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = os.path.abspath('google-auth.json')
 
+def clense_csv():
+    df = pd.read_csv('recycle-data.csv')
+    cf = pd.DataFrame(columns={'Item', 'Action'})
+    print(df.head())
+
+    i = 0
+    for index, row in df.iterrows():
+        items = row[0].strip().split(',')
+        items = list(filter(None, items))
+
+        for item in items:
+            cf.loc[i] = [item, row[1]]
+            i += 1
+
+        print(items)
+
+    print(cf.columns)
+    print(cf.head())
+    cf.to_csv('san.csv')
+
 def processImage():
     # # Instantiates a client
     # client = vision.ImageAnnotatorClient()
@@ -34,7 +54,9 @@ def processImage():
     data = pd.read_csv(data_file_name)
 
     # Process JSON
-    print(data.head())
+    action = data.loc[data['Item'].str.contains('Food')]
+    print(action)
 
 if __name__ == '__main__':
     processImage()
+    # clense_csv()

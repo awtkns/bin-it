@@ -1,101 +1,415 @@
-Item,Action
-"Compact Discs/CD, ",Specialty
-"DVDs, ",Specialty
-"Cell Phones, ",Specialty
-"Aerosol cans (empty), ",Recycle
-"Plastic Bottle, Bottle, Pop Bottle, Soda Bottle",Recycle
-"Potato Chip Bag, ",Compost
-"Plastic Container, Container, Tupperware",Recycle
-"Plastic Tub, Tub, Storage Tub",Recycle
-"Plastic Lid, Lid, Coffee Lid, Cup Top",Recycle
-"Lawn Furniture, Plastic Chairs, Plastic Chair, Outdoor Furniture, Patio Furniture",Recycle
-"Laundry Basket, Basket, Clothes Basket, Plastic Hamper",Recycle
-"5-Gallon Bucket, Bucket, White Bucket",Recycle
-"Soda Crate, Milk Crate, Plastic Crate",Recycle
-"Garbage Can, Garbage Bucket, Plastic Garbage Bin, Garbage Bin",Recycle
-"Glass Bottles, Glass Bottle, Glass Salad Dressing Bottles",Recycle
-"Liquor Bottles, Alcohol Bottles, Vodka Bottles",Recycle
-"Beer Bottles, Beer Bottle, Beer, Beer Container",Recycle
-"Soda Bottles, Root Beer Bottles, Glass Soda Bottles, Plastic Soda Bottles, Plastic Pop Bottles, Glass Pop Bottles",Recycle
-"Wine Bottles, Wine, Wine Bottle, Glass Wine Bottles, Plastic Wine Bottles",Recycle
-"Glass Jars, Glass, Jars, Pickle Jar, Jelly Jar, Mason Jar, Baby food Jar,",Recycle
-"Newspaper, News Paper, Paper, Daily Paper, News",Recycle
-"Books, Book, Hard Cover Book, Soft Cover Book, Novel, Story, Children's Books,",Recycle
-"Phonebooks, Phonebook, Telephone Book, Phone Book",Recycle
-"Magazines, Magazine, Magazine Issues, Old Magazines",Recycle
-"Milk Carton, Milk, Milk Container, Carton of Milk",Recycle
-"Juice Carton, Juice, Juice Container, Orange Juice, Grape Juice, Apple Juice",Recycle
-"Scrap Paper, Paper, Scrap, Notes, Junk Paper, Notepad",Recycle
-"Junk Mail, Mail, Spam, Direct Mail, Envelope",Recycle
-"Paper Towel Cardboard Roll, Cardboard Rolls",Recycle
-"Toilet Paper Cardboard Roll, Cardboard Rolls",Recycle
-"Pizza Box, Pizza, Pizza Container, Box of Pizza, Box from Pizza",Recycle
-"Aluminum, Baking Sheet, Baking Tray, Cookie Sheet, Aluminum Tray, Aluminum Sheet",Recycle
-"Pots and Pans, Pot and Pan, Kitchen Pots and Pans, Cooking Pots and Pans, Metal Pots, Metal Pans, Pots, Pans",Recycle
-"Tins, Tin, Tin Can",Recycle
-"Utensils, Fork, Knife, Spoon, Forks, Knifes, Spoons, Silverware",Recycle
-"Steel Cans, Steel Can, Steel and Tin Cans",Recycle
-"Tin Cans, Can, Tuna Fish Can, Tuna Can",Recycle
-"Paper Coffee Cups, Coffee Cup, To-Go Coffee Cup",Recycle
-"Cardboard Boxes, Cardboard, Box, Boxes",Recycle
-"Garbage, Trash",Compost
-"Food, Food, Leftovers",Compost
-"Takeout Containers, Takeout",Compost
-"Wrapping Paper, Gift Wrap, Christmas Paper, Decorative Wrap",Compost
-"Garden Hoses, Hose, Garden Hose",Compost
-"Incandescent Light Bulbs, Light Bulb, Bulbs",Compost
-"Latex Paint Can, Paint Can, Paint Container",Compost
-"Wet Strength Paper, Frozen Food Box, Beer Packaging, Pop Box, Soda Box, Pop Package, Fridge Packaging, Freezer Packaging, Pop Packaging, Soda Packaging, Fridge and Freezer Packaging",Compost
-"Paper Towels, Paper Towel, Bounty Paper Towel, Used Paper Towel",Compost
-"Tissues, Tissues, Kleenex, Used Tissues, Used Kleenex",Compost
-"Napkins, Napkin, Used Napkins",Compost
-"Hangers, Coat Hangers, Metal Hangers, Plastic Hangers",Compost
-"Yard Waste, Leaves, Branches, Sticks, Branches and Sticks",Specialty
-"Christmas Tree, Tree, Holiday Tree",Specialty
-"Tires, Tire, Car Tire, Car Tires,",Specialty
-"Electronics, DVD player, router, VCR, CD Player, iPod, Cell Phone, phone, Computer, Speakers, Radio, Camera, Tablet, iPad, TV, laptop, Gameboy, Video Game Player, Printer, GPS, Video Camera, Electronic Waste, Discarded Electronics, Electronic Parts, Electrical Devices",Specialty
-"Air Conditioners, ",Specialty
-"LED Light Bulbs, Light Bulbs, Bulbs, LED and Fluorescent Light Bulbs",Specialty
-"Fluorescent Light Bulbs, Light Bulbs, Bulbs, LED and Fluorescent Light Bulbs",Specialty
-"Household Hazards, Cleaners, Cleaning Products, Cleaning Spray, Bleach, Windex, Toilet Cleaner, Clorox, Lysol, 409, Mr. Clean, Oxy Clean, Pledge, Tile Cleaner, Disinfectant Cleaner",Specialty
-"Household Cleaners, Cleaners, Cleaning Products, Cleaning Spray, Bleach, Windex, Toilet Cleaner, Clorox, Lysol, 409, Mr. Clean, Oxy Clean, Pledge, Tile Cleaner, Disinfectant Cleaner",Specialty
-"Pesticides, Pesticide, Roundup, Bug Killer, Weed Killer, Ant Killer, Weed B Gone",Specialty
-"Fertilizers, Fertilizer, Lawn Fertilizer, Scotts Fertilizer, Scotts",Specialty
-"Pool Chemicals, Pool Chemical, Water Balancers, pH decreaser, pH increaser, Chlorine, Bromine, Biguanide, Ionization, Algaecides, Shocks, Oxidizers, Clarifiers, Metal Removers, Stain and Scale Inhibitors, Cyanuric Acid, Stabilizer, Liquid Stabilizer, Poly 30, Poly 60, Algaestroy 50, Foam Chek, Filter Cleaner",Specialty
-"Oil Paints, Paint, Oil Paint",Specialty
-"Acrylic Paints, Acrylics, Paint",Specialty
-"Oil-Based Paints, ",Specialty
-"Acrylic-Based Paints, ",Specialty
-"Propane Tanks, Propane, Grill Propane",Specialty
-"Batteries, Battery, AA Batteries, AAA Batteries",Specialty
-"Styrofoam, styrofoam packaging, styrofoam blocks, styrofoam sheets, styrofoam containers",Specialty
-"Paper Shredding, Shredded paper, Shredding",Specialty
-"Plastic Bags, Grocery Bags, Bag, Plastic Bag, Shopping Bag, Tops Bag, Target Bag, Walmart Bag",Specialty
-"Rechargeable Batteries, ",Specialty
-"Aerosol Spray Cans, Spray Cans, Shaving Cream Can, Spray Paint Can, Whipped Cream Can, Hair Spray Can, WD 40, Air Freshener Spray Can, Disinfectant Spray, Spray Can, Spray, Hair Spray, Pepper Spray",Specialty
-"Aerosol Cans, ",Specialty
-"Antifreeze, ",Specialty
-"Appliances, Refrigerator, Fridge, Laundry Machine, Dryer, Washer, Microwave, Oven, Stove, Toaster, Blender, Dishwasher",Specialty
-"Automobiles, Cars, Trucks, Car, Truck, Van",Specialty
-"Bicycles, bikes, bike",Specialty
-"Building Materials, ",Specialty
-"Carpet/Rugs, ",Specialty
-"Clothing/Textiles, clothes, rags",Specialty
-"Cooking Oil, ",Specialty
-"Crayons, ",Specialty
-"Fire Extinguisher/Smoke Detector, ",Specialty
-"Smoke Detector, ",Specialty
-"Furniture, ",Specialty
-"Gas, ",Specialty
-"Ink Cartridges, Printer Ink, Ink",Specialty
-"Medical Waste, unused drugs, needles",Specialty
-"Motor Oil, Oil, Car oil, Vehicle Oil",Specialty
-"Pallets, Wood Palettes",Specialty
-"Pharmaceuticals, unused drugs, needles",Specialty
-"Toys, ",Specialty
-"Plastic air pillows found inside shipping packages, ",Specialty
-"Plastic straws, ",Compost
-"Concrete, Blocks",Specialty
-"Dehumidifier, ",Specialty
-"Plastic Bubble Wrap, ",Specialty
-"Packing Peanuts, ",Specialty
+,Action,Item
+0,Compact Discs/CD,Specialty
+1,DVDs,Specialty
+2,Cell Phones,Specialty
+3,Aerosol cans (empty),Recycle
+4,Plastic Bottle,Recycle
+5, Bottle,Recycle
+6, Pop Bottle,Recycle
+7, Soda Bottle,Recycle
+8,Potato Chip Bag,Compost
+9,Plastic Container,Recycle
+10, Container,Recycle
+11, Tupperware,Recycle
+12,Plastic Tub,Recycle
+13, Tub,Recycle
+14, Storage Tub,Recycle
+15,Plastic Lid,Recycle
+16, Lid,Recycle
+17, Coffee Lid,Recycle
+18, Cup Top,Recycle
+19,Lawn Furniture,Recycle
+20, Plastic Chairs,Recycle
+21, Plastic Chair,Recycle
+22, Outdoor Furniture,Recycle
+23, Patio Furniture,Recycle
+24,Laundry Basket,Recycle
+25, Basket,Recycle
+26, Clothes Basket,Recycle
+27, Plastic Hamper,Recycle
+28,5-Gallon Bucket,Recycle
+29, Bucket,Recycle
+30, White Bucket,Recycle
+31,Soda Crate,Recycle
+32, Milk Crate,Recycle
+33, Plastic Crate,Recycle
+34,Garbage Can,Recycle
+35, Garbage Bucket,Recycle
+36, Plastic Garbage Bin,Recycle
+37, Garbage Bin,Recycle
+38,Glass Bottles,Recycle
+39, Glass Bottle,Recycle
+40, Glass Salad Dressing Bottles,Recycle
+41,Liquor Bottles,Recycle
+42, Alcohol Bottles,Recycle
+43, Vodka Bottles,Recycle
+44,Beer Bottles,Recycle
+45, Beer Bottle,Recycle
+46, Beer,Recycle
+47, Beer Container,Recycle
+48,Soda Bottles,Recycle
+49, Root Beer Bottles,Recycle
+50, Glass Soda Bottles,Recycle
+51, Plastic Soda Bottles,Recycle
+52, Plastic Pop Bottles,Recycle
+53, Glass Pop Bottles,Recycle
+54,Wine Bottles,Recycle
+55, Wine,Recycle
+56, Wine Bottle,Recycle
+57, Glass Wine Bottles,Recycle
+58, Plastic Wine Bottles,Recycle
+59,Glass Jars,Recycle
+60, Glass,Recycle
+61, Jars,Recycle
+62, Pickle Jar,Recycle
+63, Jelly Jar,Recycle
+64, Mason Jar,Recycle
+65, Baby food Jar,Recycle
+66,Newspaper,Recycle
+67, News Paper,Recycle
+68, Paper,Recycle
+69, Daily Paper,Recycle
+70, News,Recycle
+71,Books,Recycle
+72, Book,Recycle
+73, Hard Cover Book,Recycle
+74, Soft Cover Book,Recycle
+75, Novel,Recycle
+76, Story,Recycle
+77, Children's Books,Recycle
+78,Phonebooks,Recycle
+79, Phonebook,Recycle
+80, Telephone Book,Recycle
+81, Phone Book,Recycle
+82,Magazines,Recycle
+83, Magazine,Recycle
+84, Magazine Issues,Recycle
+85, Old Magazines,Recycle
+86,Milk Carton,Recycle
+87, Milk,Recycle
+88, Milk Container,Recycle
+89, Carton of Milk,Recycle
+90,Juice Carton,Recycle
+91, Juice,Recycle
+92, Juice Container,Recycle
+93, Orange Juice,Recycle
+94, Grape Juice,Recycle
+95, Apple Juice,Recycle
+96,Scrap Paper,Recycle
+97, Paper,Recycle
+98, Scrap,Recycle
+99, Notes,Recycle
+100, Junk Paper,Recycle
+101, Notepad,Recycle
+102,Junk Mail,Recycle
+103, Mail,Recycle
+104, Spam,Recycle
+105, Direct Mail,Recycle
+106, Envelope,Recycle
+107,Paper Towel Cardboard Roll,Recycle
+108, Cardboard Rolls,Recycle
+109,Toilet Paper Cardboard Roll,Recycle
+110, Cardboard Rolls,Recycle
+111,Pizza Box,Recycle
+112, Pizza,Recycle
+113, Pizza Container,Recycle
+114, Box of Pizza,Recycle
+115, Box from Pizza,Recycle
+116,Aluminum,Recycle
+117, Baking Sheet,Recycle
+118, Baking Tray,Recycle
+119, Cookie Sheet,Recycle
+120, Aluminum Tray,Recycle
+121, Aluminum Sheet,Recycle
+122,Pots and Pans,Recycle
+123, Pot and Pan,Recycle
+124, Kitchen Pots and Pans,Recycle
+125, Cooking Pots and Pans,Recycle
+126, Metal Pots,Recycle
+127, Metal Pans,Recycle
+128, Pots,Recycle
+129, Pans,Recycle
+130,Tins,Recycle
+131, Tin,Recycle
+132, Tin Can,Recycle
+133,Utensils,Recycle
+134, Fork,Recycle
+135, Knife,Recycle
+136, Spoon,Recycle
+137, Forks,Recycle
+138, Knifes,Recycle
+139, Spoons,Recycle
+140, Silverware,Recycle
+141,Steel Cans,Recycle
+142, Steel Can,Recycle
+143, Steel and Tin Cans,Recycle
+144,Tin Cans,Recycle
+145, Can,Recycle
+146, Tuna Fish Can,Recycle
+147, Tuna Can,Recycle
+148,Paper Coffee Cups,Recycle
+149, Coffee Cup,Recycle
+150, To-Go Coffee Cup,Recycle
+151,Cardboard Boxes,Recycle
+152, Cardboard,Recycle
+153, Box,Recycle
+154, Boxes,Recycle
+155,Garbage,Compost
+156, Trash,Compost
+157,Food,Compost
+158, Leftovers,Compost
+159,Takeout Containers,Compost
+160, Takeout,Compost
+161,Wrapping Paper,Compost
+162, Gift Wrap,Compost
+163, Christmas Paper,Compost
+164, Decorative Wrap,Compost
+165,Garden Hoses,Compost
+166, Hose,Compost
+167, Garden Hose,Compost
+168,Incandescent Light Bulbs,Compost
+169, Light Bulb,Compost
+170, Bulbs,Compost
+171,Latex Paint Can,Compost
+172, Paint Can,Compost
+173, Paint Container,Compost
+174,Wet Strength Paper,Compost
+175, Frozen Food Box,Compost
+176, Beer Packaging,Compost
+177, Pop Box,Compost
+178, Soda Box,Compost
+179, Pop Package,Compost
+180, Fridge Packaging,Compost
+181, Freezer Packaging,Compost
+182, Pop Packaging,Compost
+183, Soda Packaging,Compost
+184, Fridge and Freezer Packaging,Compost
+185,Paper Towels,Compost
+186, Paper Towel,Compost
+187, Bounty Paper Towel,Compost
+188, Used Paper Towel,Compost
+189,Tissues,Compost
+190, Tissues,Compost
+191, Kleenex,Compost
+192, Used Tissues,Compost
+193, Used Kleenex,Compost
+194,Napkins,Compost
+195, Napkin,Compost
+196, Used Napkins,Compost
+197,Hangers,Compost
+198, Coat Hangers,Compost
+199, Metal Hangers,Compost
+200, Plastic Hangers,Compost
+201,Yard Waste,Specialty
+202, Leaves,Specialty
+203, Branches,Specialty
+204, Sticks,Specialty
+205, Branches and Sticks,Specialty
+206,Christmas Tree,Specialty
+207, Tree,Specialty
+208, Holiday Tree,Specialty
+209,Tires,Specialty
+210, Tire,Specialty
+211, Car Tire,Specialty
+212, Car Tires,Specialty
+213,Electronics,Specialty
+214, DVD player,Specialty
+215, router,Specialty
+216, VCR,Specialty
+217, CD Player,Specialty
+218, iPod,Specialty
+219, Cell Phone,Specialty
+220, phone,Specialty
+221, Computer,Specialty
+222, Speakers,Specialty
+223, Radio,Specialty
+224, Camera,Specialty
+225, Tablet,Specialty
+226, iPad,Specialty
+227, TV,Specialty
+228, laptop,Specialty
+229, Gameboy,Specialty
+230, Video Game Player,Specialty
+231, Printer,Specialty
+232, GPS,Specialty
+233, Video Camera,Specialty
+234, Electronic Waste,Specialty
+235, Discarded Electronics,Specialty
+236, Electronic Parts,Specialty
+237, Electrical Devices,Specialty
+238,Air Conditioners,Specialty
+239,LED Light Bulbs,Specialty
+240, Light Bulbs,Specialty
+241, Bulbs,Specialty
+242, LED and Fluorescent Light Bulbs,Specialty
+243,Fluorescent Light Bulbs,Specialty
+244, Light Bulbs,Specialty
+245, Bulbs,Specialty
+246, LED and Fluorescent Light Bulbs,Specialty
+247,Household Hazards,Specialty
+248, Cleaners,Specialty
+249, Cleaning Products,Specialty
+250, Cleaning Spray,Specialty
+251, Bleach,Specialty
+252, Windex,Specialty
+253, Toilet Cleaner,Specialty
+254, Clorox,Specialty
+255, Lysol,Specialty
+256, 409,Specialty
+257, Mr. Clean,Specialty
+258, Oxy Clean,Specialty
+259, Pledge,Specialty
+260, Tile Cleaner,Specialty
+261, Disinfectant Cleaner,Specialty
+262,Household Cleaners,Specialty
+263, Cleaners,Specialty
+264, Cleaning Products,Specialty
+265, Cleaning Spray,Specialty
+266, Bleach,Specialty
+267, Windex,Specialty
+268, Toilet Cleaner,Specialty
+269, Clorox,Specialty
+270, Lysol,Specialty
+271, 409,Specialty
+272, Mr. Clean,Specialty
+273, Oxy Clean,Specialty
+274, Pledge,Specialty
+275, Tile Cleaner,Specialty
+276, Disinfectant Cleaner,Specialty
+277,Pesticides,Specialty
+278, Pesticide,Specialty
+279, Roundup,Specialty
+280, Bug Killer,Specialty
+281, Weed Killer,Specialty
+282, Ant Killer,Specialty
+283, Weed B Gone,Specialty
+284,Fertilizers,Specialty
+285, Fertilizer,Specialty
+286, Lawn Fertilizer,Specialty
+287, Scotts Fertilizer,Specialty
+288, Scotts,Specialty
+289,Pool Chemicals,Specialty
+290, Pool Chemical,Specialty
+291, Water Balancers,Specialty
+292, pH decreaser,Specialty
+293, pH increaser,Specialty
+294, Chlorine,Specialty
+295, Bromine,Specialty
+296, Biguanide,Specialty
+297, Ionization,Specialty
+298, Algaecides,Specialty
+299, Shocks,Specialty
+300, Oxidizers,Specialty
+301, Clarifiers,Specialty
+302, Metal Removers,Specialty
+303, Stain and Scale Inhibitors,Specialty
+304, Cyanuric Acid,Specialty
+305, Stabilizer,Specialty
+306, Liquid Stabilizer,Specialty
+307, Poly 30,Specialty
+308, Poly 60,Specialty
+309, Algaestroy 50,Specialty
+310, Foam Chek,Specialty
+311, Filter Cleaner,Specialty
+312,Oil Paints,Specialty
+313, Paint,Specialty
+314, Oil Paint,Specialty
+315,Acrylic Paints,Specialty
+316, Acrylics,Specialty
+317, Paint,Specialty
+318,Oil-Based Paints,Specialty
+319,Acrylic-Based Paints,Specialty
+320,Propane Tanks,Specialty
+321, Propane,Specialty
+322, Grill Propane,Specialty
+323,Batteries,Specialty
+324, Battery,Specialty
+325, AA Batteries,Specialty
+326, AAA Batteries,Specialty
+327,Styrofoam,Specialty
+328, styrofoam packaging,Specialty
+329, styrofoam blocks,Specialty
+330, styrofoam sheets,Specialty
+331, styrofoam containers,Specialty
+332,Paper Shredding,Specialty
+333, Shredded paper,Specialty
+334, Shredding,Specialty
+335,Plastic Bags,Specialty
+336, Grocery Bags,Specialty
+337, Bag,Specialty
+338, Plastic Bag,Specialty
+339, Shopping Bag,Specialty
+340, Tops Bag,Specialty
+341, Target Bag,Specialty
+342, Walmart Bag,Specialty
+343,Rechargeable Batteries,Specialty
+344,Aerosol Spray Cans,Specialty
+345, Spray Cans,Specialty
+346, Shaving Cream Can,Specialty
+347, Spray Paint Can,Specialty
+348, Whipped Cream Can,Specialty
+349, Hair Spray Can,Specialty
+350, WD 40,Specialty
+351, Air Freshener Spray Can,Specialty
+352, Disinfectant Spray,Specialty
+353, Spray Can,Specialty
+354, Spray,Specialty
+355, Hair Spray,Specialty
+356, Pepper Spray,Specialty
+357,Aerosol Cans,Specialty
+358,Antifreeze,Specialty
+359,Appliances,Specialty
+360, Refrigerator,Specialty
+361, Fridge,Specialty
+362, Laundry Machine,Specialty
+363, Dryer,Specialty
+364, Washer,Specialty
+365, Microwave,Specialty
+366, Oven,Specialty
+367, Stove,Specialty
+368, Toaster,Specialty
+369, Blender,Specialty
+370, Dishwasher,Specialty
+371,Automobiles,Specialty
+372, Cars,Specialty
+373, Trucks,Specialty
+374, Car,Specialty
+375, Truck,Specialty
+376, Van,Specialty
+377,Bicycles,Specialty
+378, bikes,Specialty
+379, bike,Specialty
+380,Building Materials,Specialty
+381,Carpet/Rugs,Specialty
+382,Clothing/Textiles,Specialty
+383, clothes,Specialty
+384, rags,Specialty
+385,Cooking Oil,Specialty
+386,Crayons,Specialty
+387,Fire Extinguisher/Smoke Detector,Specialty
+388,Smoke Detector,Specialty
+389,Furniture,Specialty
+390,Gas,Specialty
+391,Ink Cartridges,Specialty
+392, Printer Ink,Specialty
+393, Ink,Specialty
+394,Medical Waste,Specialty
+395, unused drugs,Specialty
+396, needles,Specialty
+397,Motor Oil,Specialty
+398, Oil,Specialty
+399, Car oil,Specialty
+400, Vehicle Oil,Specialty
+401,Pallets,Specialty
+402, Wood Palettes,Specialty
+403,Pharmaceuticals,Specialty
+404, unused drugs,Specialty
+405, needles,Specialty
+406,Toys,Specialty
+407,Plastic air pillows found inside shipping packages,Specialty
+408,Plastic straws,Compost
+409,Concrete,Specialty
+410, Blocks,Specialty
+411,Dehumidifier,Specialty
+412,Plastic Bubble Wrap,Specialty
+413,Packing Peanuts,Specialty
