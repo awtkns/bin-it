@@ -1,5 +1,5 @@
 from flask import jsonify
-from googleapiclient.discovery import build
+from googlesearch import search
 import os
 import pandas as pd
 import json
@@ -22,10 +22,6 @@ config = {
 }
 firebase = pyrebase.initialize_app(config)
 
-# Configure Google Search
-search_api_key = "AIzaSyApyB34Te2NlD7d3apnJFlt39yY5ltUeqY"
-search_cse_id = "007869732153195139463:bmtbayhxdsl"
-
 
 def processLabels(labels):
 
@@ -42,16 +38,17 @@ def processLabels(labels):
 
 
 def generatePacket(label, action):
-    # google_search("Coffee")
-    # Google search doesnt work :((((((
 
-    return jsonify(label, action)
+    try:
+        results = search("how to recycle " + label, tld='com', lang='en', num=2, start=0, stop=1, pause=2.0)
+        for j in results:
+            print(j)
+            link = j
 
+    except:
+        link = "https://www.google.ca"
 
-def google_search(search_term, **kwargs):
-    service = build("customsearch", "v1", developerKey=search_api_key)
-    res = service.cse().list(q=search_term, cx=search_cse_id, **kwargs).execute()
-    return res
+    return jsonify(label, action, link)
 
 
 def addToDB(label, table):

@@ -64,8 +64,12 @@
                   <h2>Whats the Impact?</h2>
                   <br>
                   <p>
-                    In addition to reducing greenhouse gas emissions, recycling plastic water bottles also helps to decrease the amount of pollution in the air and water sources.
+                    In addition to reducing greenhouse gas emissions, recycling also helps to decrease the amount of pollution in the air and water sources.
                   </p>
+                </v-card-text>
+
+                <v-card-text>
+                  <a v-bind:href="''+this.link+''">Find out more about recycling {{label}}s</a>
                 </v-card-text>
 
                 <v-card-actions>
@@ -130,6 +134,7 @@
         loader: false,
         label: null,
         action: null,
+        link: "www.google.ca",
         data: {               //type vision api Request
           "requests": [{
             "features": [{
@@ -161,7 +166,6 @@
             video.srcObject = stream;
           });
 
-        this.result = false;
         this.loader = true;
         context.drawImage(video, 0, 0, 1280, 960);
 
@@ -180,6 +184,7 @@
             console.log(processedJSON.data)
             this.label = processedJSON.data[0];
             this.action = processedJSON.data[1];
+            this.link = processedJSON.data[2];
           })
 
         }).catch(error => {
