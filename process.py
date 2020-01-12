@@ -40,9 +40,9 @@ def processLabels(labels):
 def generatePacket(label, action):
     service = build("customsearch", "v1", developerKey="AIzaSyApyB34Te2NlD7d3apnJFlt39yY5ltUeqY")
 
-    results = google_search('stackoverflow site:en.wikipedia.org', num=10)
-    for result in results:
-        print(result)
+    # results = google_search('stackoverflow site:en.wikipedia.org', num=10)
+    # for result in results:
+    #     print(result)
 
     return jsonify(label, action)
 
