@@ -35,7 +35,7 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    '@nuxtjs/vuetify',
+
   ],
   /*
   ** Nuxt.js modules
@@ -43,6 +43,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/vuetify',
   ],
   /*
   ** Axios module configuration
@@ -55,6 +56,7 @@ export default {
   ** https://github.com/nuxt-community/vuetify-module
   */
   vuetify: {
+    optionsPath: './vuetify.options.js',
     customVariables: ['~/assets/variables.scss'],
     theme: {
       dark: false,
