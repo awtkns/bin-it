@@ -1,12 +1,11 @@
 <template>
   <v-layout row wrap>
     <v-container grid-list-xl>
-      <v-card>
-        <!-- logo -->
-        <v-card-actions class="justify-center">
-          <custom-logo></custom-logo>
-        </v-card-actions>
 
+      <!-- logo -->
+      <custom-logo></custom-logo>
+
+      <v-card>
         <!-- Home page introduction -->
         <v-card-actions class="justify-center" style="text-align:center;">
           <p>Have an item you want to throw out? Not sure which bin it goes in? Find out in 1, 2, 3!</p>

@@ -1,29 +1,22 @@
 <template>
   <v-layout row wrap>
     <v-container grid-list-xl>
-      <v-card>
-        <!-- logo -->
-        <v-card-actions class="justify-center">
-          <custom-logo></custom-logo>
-        </v-card-actions>
+      <!-- logo -->
+      <custom-logo></custom-logo>
 
+      <v-card>
         <div class="text-center">
-          <canvas id="canvas" width="100%" height="50%" style="display:none;"/>
-          <video id="video" width="100%" height="50%" autoplay/>
+          <canvas id="canvas" width="1280px" height="960px" style="display: none;"/>
+          <v-container outlined class="mx-auto" max-width="344" color="white">
+            <video id="video" width="100%" height="50%" autoplay/>
+          </v-container>
 
           <v-overlay :absolute="absolute" :value="overlay">
             <InfoCard></InfoCard>
-            <v-btn color="success" @click="overlay = false" block>
+            <v-btn  @click="overlay = false" block color="white" style="color:dodgerblue">
               Scan Again
             </v-btn>
           </v-overlay>
-
-
-          <!--
-          <v-overlay :absolute="absolute" :value="overlay">
-            <InfoCard></InfoCard>
-          </v-overlay>
-          -->
         </div>
 
         <v-btn @click.native="process" color="primary" block>Click to Scan</v-btn>
@@ -103,7 +96,7 @@
 
         this.result = false;
         this.loader = true;
-        context.drawImage(video, 0, 0, 640, 480);
+        context.drawImage(video, 0, 0, 1280, 960);
 
         const base64 = canvas.toDataURL();
         const finalImage = base64.replace("data:image/png;base64,", "");
