@@ -3,7 +3,7 @@
     <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
   </svg>
   -->
-  <div >
+  <div>
     <v-card block>
       <v-container>
         <v-card-actions class="justify-center">

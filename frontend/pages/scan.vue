@@ -1,13 +1,17 @@
 <template>
-  <Capture></Capture>
+  <v-layout>
+    <Header></Header>
+    <Capture></Capture>
+  </v-layout>
 </template>
 
 <script>
-    import Capture from "../components/Capture";
-    export default {
-        name: "scan",
-      components: {Capture}
-    }
+  import Header from "../components/Header";
+  import Capture from "../components/Capture";
+  export default {
+    name: "scan",
+    components: {Header, Capture}
+  }
 </script>
 
 <style scoped>

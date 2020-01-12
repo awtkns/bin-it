@@ -2,8 +2,6 @@
   <v-layout row wrap>
     <v-container grid-list-xl>
       <v-card>
-      <!-- logo -->
-      <custom-logo></custom-logo>
 <!--        <stats />-->
         <div class="text-center">
           <canvas id="canvas" width="1280" height="960" style="display:none;"/>
@@ -57,11 +55,10 @@
 <script>
 
   import axios from 'axios';
-  import CustomLogo from "./CustomLogo";
   import InfoCard from "./InfoCard";
   import Stats from "./Stats";
   export default {
-    components: {Stats, InfoCard, CustomLogo},
+    components: {Stats, InfoCard},
     data(){
 
       return{
