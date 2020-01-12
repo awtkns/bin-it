@@ -1,9 +1,10 @@
 <template>
   <v-layout row wrap>
     <v-container grid-list-xl>
+      <v-card>
       <!-- logo -->
       <custom-logo></custom-logo>
-
+<!--        <stats />-->
         <div class="text-center">
           <canvas id="canvas" width="1280" height="960" style="display:none;"/>
           <video id="video" width="100%" height="50%" autoplay/>
@@ -55,12 +56,12 @@
 
 <script>
 
-  //import $ from "jquery";
   import axios from 'axios';
   import CustomLogo from "./CustomLogo";
   import InfoCard from "./InfoCard";
+  import Stats from "./Stats";
   export default {
-    components: {InfoCard, CustomLogo},
+    components: {Stats, InfoCard, CustomLogo},
     data(){
 
       return{

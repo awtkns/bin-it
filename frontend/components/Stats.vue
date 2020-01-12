@@ -1,7 +1,7 @@
 <template>
   <v-card>
     <v-row>Stats</v-row>
-    <v-row v-for="s in statslist">{{ s }}</v-row>
+<!--    <v-row v-for="s in statslist">{{ s }}</v-row>-->
   </v-card>
 </template>
 
