@@ -101,7 +101,7 @@
           const labels = response.data.responses[0].labelAnnotations;
           console.log(labels);
 
-          axios.post('http://127.0.0.1:5000/image', {
+          axios.post('https://flask-nuxt-ci.appspot.com/image', {
             payload: labels
           }).then(processedJSON => {
             console.log(processedJSON.data)
