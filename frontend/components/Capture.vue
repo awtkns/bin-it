@@ -107,7 +107,12 @@
           this.data).then(response => {
 
             const result = response.data.responses[0];
-            console.log(result);
+            console.log(response.data);
+            axios.post('http://127.0.0.1:5000/image', response).then(action=>{
+              console.log(action)
+
+            })
+
           /*
           const result = response.data.responses[0].faceAnnotations[0];
 
@@ -120,9 +125,9 @@
           vm.confidence = this.confidenceInt(result.detectionConfidence);
           vm.loader = false;
           vm.result = true;
+*/
 
 
-           */
 
 
         }).catch(error => {

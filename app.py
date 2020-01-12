@@ -13,6 +13,6 @@ if __name__ == '__main__':
     app.run()
 
 
-@app.route('/inspire', methods=['GET'])
+@app.route('/image', methods=['POST'])
 def inspire():
     return jsonify('I am inspired')
