@@ -33,13 +33,14 @@
             <v-card color="white" class="mx-auto" max-width="344" elevation="2">
               <div style="color:black;text-align: left;">
                 <v-card-text >
+                  <!-- Recycle it! -->
                   <h1>
                     <v-icon color="black" left>mdi-recycle</v-icon>
-                    Recycle it!
+                    You should: {{action}} it!
                   </h1>
                   <br>
                   <p>
-                    Plastic Bottles are recyclable in blue bins.
+                    {{label}} is {{action}}able.
                   </p>
                 </v-card-text>
                 <v-card-text>
