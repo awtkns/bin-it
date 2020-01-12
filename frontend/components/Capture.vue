@@ -24,12 +24,7 @@
     </v-flex>
     <v-flex xs12 sm12 md6 lg6 xl6>
       <h2 class="orange--text text-xs-center">Result</h2>
-      <div class="text-xs-center" v-show="loader">
-        <v-progress-circular indeterminate v-bind:size="100" v-bind:width="3" class="teal--text"></v-progress-circular>
-      </div>
-      <div v-show="result" class="text-md-center">
-        <h4 class="red--text">You should: {{ resultText }} it!%</h4>
-      </div>
+      <h4 class="red--text">You should: {{resultText}} it!</h4>
     </v-flex>
   </v-layout>
 </template>

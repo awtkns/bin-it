@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-from test import processLabels
+from process import processLabels
 import os
 import pandas as pd
 
@@ -16,7 +16,7 @@ def receiveLabels():
     if request.method != 'POST':
         return jsonify("Payload failed")
 
-    return processLabels(request.data)
+    return jsonify(processLabels(request.data))
 
 if __name__ == '__main__':
     app.run()
