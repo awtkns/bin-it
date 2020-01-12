@@ -1,4 +1,5 @@
 from flask import jsonify
+from googleapiclient.discovery import build
 import os
 import pandas as pd
 import json
@@ -35,8 +36,21 @@ def processLabels(labels):
     addToDB(labels[0]['description'], "mishits")
     return generatePacket(labels[0]['description'], "Unsure")
 
+
 def generatePacket(label, action):
+    service = build("customsearch", "v1", developerKey="AIzaSyApyB34Te2NlD7d3apnJFlt39yY5ltUeqY")
+
+    results = google_search('stackoverflow site:en.wikipedia.org', num=10)
+    for result in results:
+        print(result)
+
     return jsonify(label, action)
+
+
+def google_search(search_term, **kwargs):
+    service = build("customsearch", "v1", developerKey="AIzaSyApyB34Te2NlD7d3apnJFlt39yY5ltUeqY")
+    res = service.cse().list(search_term, "007869732153195139463:bmtbayhxdsl", **kwargs).execute()
+    return res['items']
 
 
 def addToDB(label, table):

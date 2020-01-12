@@ -8,5 +8,6 @@ dependencies:
   - flask
   - flask-cors
   - pandas
+  - google-api-python-client
 
 
