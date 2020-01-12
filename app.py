@@ -1,4 +1,5 @@
 from flask import Flask
+from flask import jsonify
 
 app = Flask(__name__)
 
@@ -10,3 +11,8 @@ def hello_world():
 
 if __name__ == '__main__':
     app.run()
+
+
+@app.route('/inspire', methods=['GET'])
+def inspire():
+    return jsonify('I am inspired')
