@@ -1,11 +1,12 @@
 <template>
-  <CustomLogo></CustomLogo>
+  <v-row>
+    <v-btn href="/"><</v-btn>
+  </v-row>
 </template>
 
 <script>
-  import CustomLogo from "./CustomLogo";
   export default {
-    name: "Header"
+    name: "Header",
   }
 </script>
 

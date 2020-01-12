@@ -1,5 +1,5 @@
 <template>
-  <v-layout>
+  <v-layout column>
     <Header></Header>
     <Capture></Capture>
   </v-layout>
