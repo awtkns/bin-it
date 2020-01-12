@@ -1,4 +1,4 @@
-,Action,Item
+,Item,Action
 0,Compact Discs/CD,Specialty
 1,DVDs,Specialty
 2,Cell Phones,Specialty
@@ -255,7 +255,7 @@
 253, Toilet Cleaner,Specialty
 254, Clorox,Specialty
 255, Lysol,Specialty
-256, 409,Specialty
+256,409,Specialty
 257, Mr. Clean,Specialty
 258, Oxy Clean,Specialty
 259, Pledge,Specialty
@@ -270,7 +270,7 @@
 268, Toilet Cleaner,Specialty
 269, Clorox,Specialty
 270, Lysol,Specialty
-271, 409,Specialty
+271,409,Specialty
 272, Mr. Clean,Specialty
 273, Oxy Clean,Specialty
 274, Pledge,Specialty
