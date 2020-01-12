@@ -15,6 +15,7 @@ dependencies:
   - click=7.0=py37_0
   - cryptography=2.8=py37h72c5cf5_1
   - flask=1.1.1=py_0
+  - flask-cors=3.0.8=py_0
   - google-api-core=1.15.0=py37_0
   - google-api-core-grpc=1.15.0=0
   - google-auth=1.10.0=py_0
@@ -43,7 +44,7 @@ dependencies:
   - nodejs=12.14.1=h67efad7_0
   - numpy=1.17.4=py37hc1035e2_0
   - numpy-base=1.17.4=py37hde5b4d6_0
-  - openssl=1.1.1=h7b6447c_0
+  - openssl=1.1.1d=h7b6447c_3
   - pandas=0.25.3=py37he6710b0_0
   - pip=19.3.1=py37_0
   - protobuf=3.11.2=py37he1b5a44_0

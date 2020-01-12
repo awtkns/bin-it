@@ -1,8 +1,6 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from process import processLabels
-import os
-import pandas as pd
 
 app = Flask(__name__)
 CORS(app, resources={r'/*': {'origins': '*'}})

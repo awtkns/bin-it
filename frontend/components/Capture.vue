@@ -25,6 +25,10 @@
     <v-flex xs12 sm12 md6 lg6 xl6>
       <h2 class="orange--text text-xs-center">Result</h2>
       <h4 class="red--text">You should: {{resultText}} it!</h4>
+      <h4>I see...</h4>
+      <ul>
+        <h5 v-for
+      </ul>
     </v-flex>
   </v-layout>
 </template>
@@ -68,7 +72,6 @@
             video.srcObject = stream;
           });
 
-        const vm = this;
         this.result = false;
         this.loader = true;
         context.drawImage(video, 0, 0, 640, 480);
