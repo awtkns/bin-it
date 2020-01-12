@@ -22,6 +22,10 @@ config = {
 }
 firebase = pyrebase.initialize_app(config)
 
+# Configure Google Search
+search_api_key = "AIzaSyApyB34Te2NlD7d3apnJFlt39yY5ltUeqY"
+search_cse_id = "007869732153195139463:bmtbayhxdsl"
+
 
 def processLabels(labels):
 
@@ -31,26 +35,22 @@ def processLabels(labels):
         actions = data.loc[data['Item'].str.match(label['description'])]['Action'].values
         if actions.size > 0:
             addToDB(label['description'], "hits")
-            return generatePacket(label['description'], actions[0])
+            return generatePacket(label['description'], "You can " + actions[0] + " it!")
 
     addToDB(labels[0]['description'], "mishits")
-    return generatePacket(labels[0]['description'], "Unsure")
+    return generatePacket(labels[0]['description'], "I'm not sure!")
 
 
 def generatePacket(label, action):
-    service = build("customsearch", "v1", developerKey="AIzaSyApyB34Te2NlD7d3apnJFlt39yY5ltUeqY")
-
-    # results = google_search('stackoverflow site:en.wikipedia.org', num=10)
-    # for result in results:
-    #     print(result)
+    google_search("Coffee")
 
     return jsonify(label, action)
 
 
 def google_search(search_term, **kwargs):
-    service = build("customsearch", "v1", developerKey="AIzaSyApyB34Te2NlD7d3apnJFlt39yY5ltUeqY")
-    res = service.cse().list(search_term, "007869732153195139463:bmtbayhxdsl", **kwargs).execute()
-    return res['items']
+    service = build("customsearch", "v1", developerKey=search_api_key)
+    res = service.cse().list(q=search_term, cx=search_cse_id, **kwargs).execute()
+    return res
 
 
 def addToDB(label, table):

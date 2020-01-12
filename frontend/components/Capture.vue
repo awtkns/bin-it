@@ -35,18 +35,14 @@
                   <!-- Recycle it! -->
                   <h1>
                     <v-icon color="black" left>mdi-recycle</v-icon>
-                    You should: {{action}} it!
+                    {{action}}
                   </h1>
-                  <br>
-                  <p>
-                    {{label}} is {{action}}able.
-                  </p>
                 </v-card-text>
                 <v-card-text>
                   <h2>How to Reuse it?</h2>
                   <br>
                   <p>
-                    Plastic Bottles are recyclable in blue bins.
+                    {{label}}: {{action}}
                   </p>
                 </v-card-text>
 
@@ -170,7 +166,7 @@
           const labels = response.data.responses[0].labelAnnotations;
           console.log(labels);
 
-          axios.post('https://flask-nuxt-ci.appspot.com/image', {
+          axios.post('http://127.0.0.1:5000/image', {
             payload: labels
           }).then(processedJSON => {
             console.log(processedJSON.data)
