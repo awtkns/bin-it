@@ -59,7 +59,7 @@
         data: {               //type vision api Request
           "requests": [{
             "features": [{
-              "type": "FACE_DETECTION"
+              "type": "LABEL_DETECTION"
             }],
             "image": {
               "content": null
@@ -107,12 +107,17 @@
           this.data).then(response => {
 
             const result = response.data.responses[0];
-            console.log(response.data);
-            axios.post('http://127.0.0.1:5000/image', response).then(action=>{
-              console.log(action)
+            console.log(result);
 
-            })
+            //const [result] = await client.labelDetection('./resources/wakeupcat.jpg');
+            const labels = result.labelAnnotations;
+            console.log(labels);
 
+
+            /*
+            const result = response.data.responses[0];
+            console.log(result);
+            */
           /*
           const result = response.data.responses[0].faceAnnotations[0];
 
