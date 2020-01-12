@@ -2,18 +2,15 @@
   <v-layout row wrap>
     <v-container grid-list-xl>
 
-      <!-- logo -->
-      <custom-logo></custom-logo>
-
-      <v-card>
+      <v-layout column>
         <!-- Home page introduction -->
         <v-card-actions class="justify-center" style="text-align:center;">
           <p>Have an item you want to throw out? Not sure which bin it goes in? Find out in 1, 2, 3!</p>
         </v-card-actions>
-      </v-card>
+      </v-layout>
 
       <!-- Steps -->
-      <v-card>
+      <v-layout column>
         <v-card-actions class="justify-center">
           <h3>1. Hold your item</h3>
         </v-card-actions>
@@ -27,17 +24,13 @@
           <p>Learn about the impact your making!</p>
         </v-card-actions>
 
-        <div style="padding: 25px;">
-          <v-btn to="scan" class="ma-2" color="primary" block>
-            <!--<v-icon class="material-icons">
-              mdi-camera
-            </v-icon>
-            -->
+        <div class="scan-btn-container">
+          <v-btn to="scan" color="primary" block>
             <v-icon dark left>mdi-camera</v-icon>
             Scan Object
           </v-btn>
         </div>
-      </v-card>
+      </v-layout>
     </v-container>
     <!--<v-btn @click.native="process" block secondary dark><a href="pages/scan.vue">Scan Object</a></v-btn>-->
     <!--<v-icon left></v-icon> Analyze</v-btn>-->
@@ -47,13 +40,17 @@
 </template>
 
 <script>
-    import CustomLogo from "./CustomLogo";
+    import Header from "./Header";
     export default {
-        name: "MainMenu",
-      components: {CustomLogo}
+      name: "MainMenu",
+      components: {Header}
     }
 </script>
 
 <style scoped>
+
+  .scan-btn-container {
+    padding: 25px;
+  }
 
 </style>

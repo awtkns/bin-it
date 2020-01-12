@@ -1,19 +1,22 @@
 <template>
-  <MainMenu/>
+  <v-layout column>
+    <v-layout row wrap align-center>
+      <CustomLogo></CustomLogo>
+    </v-layout>
+    <MainMenu/>
+  </v-layout>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
-import Capture from "../components/Capture";
+import Header from '../components/Header';
+import CustomLogo from "../components/CustomLogo";
 import MainMenu from "../components/MainMenu";
 
 export default {
   components: {
-    MainMenu,
-    Capture,
-    Logo,
-    VuetifyLogo
+    Header,
+    CustomLogo,
+    MainMenu
   }
 }
 </script>
