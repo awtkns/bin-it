@@ -1,0 +1,38 @@
+{
+    "label_annotations" {
+        "mid": "/m/02wbm",
+        "description": "Food",
+        "score": 0.9136864542961121,
+        "topicality": 0.9136864542961121
+    },
+    "label_annotations" {
+        "mid": "/m/01ykh",
+        "description": "Cuisine",
+        "score": 0.838667631149292,
+        "topicality": 0.838667631149292
+    },
+    "label_annotations" {
+        "mid": "/m/07xgrh",
+        "description": "Ingredient",
+        "score": 0.817215085029602,
+        "topicality": 0.817215085029602
+    },
+    "label_annotations" {
+        "mid": "/m/02q08p0",
+        "description": "Dish",
+        "score": 0.8123355507850647,
+        "topicality": 0.8123355507850647
+    },
+    "label_annotations" {
+        "mid": "/m/047kbm",
+        "description": "Salt-cured meat",
+        "score": 0.6103851795196533,
+        "topicality": 0.6103851795196533
+    },
+    "label_annotations" {
+        "mid": "/m/04q6ng",
+        "description": "Comfort food",
+        "score": 0.5146770477294922,
+        "topicality": 0.5146770477294922
+    }
+}
