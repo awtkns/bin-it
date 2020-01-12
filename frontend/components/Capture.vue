@@ -1,43 +1,73 @@
 <template>
   <v-layout row wrap>
+    <v-container grid-list-xl>
+      <v-card>
+        <!-- logo -->
+        <v-card-actions class="justify-center">
+          <custom-logo></custom-logo>
+        </v-card-actions>
+
+        <!-- Home page introduction -->
+        <v-card-actions class="justify-center">
+          <h1>Bin it</h1>
+        </v-card-actions>
+        <v-card-actions class="justify-center" style="text-align:center;">
+          <p>Have an item you want to throw out? Not sure which bin it goes in? Find out in 1, 2, 3!</p>
+        </v-card-actions>
+      </v-card>
+
+      <!-- Steps -->
+      <v-card>
+        <v-card-actions class="justify-center">
+          <h3>1. Hold your item</h3>
+        </v-card-actions>
+        <v-card-actions class="justify-center">
+          <h3>2. Wait for the scan</h3>
+        </v-card-actions>
+        <v-card-actions class="justify-center">
+          <h3>3. Know where to throw</h3>
+        </v-card-actions>
+        <v-card-actions class="justify-center" style="text-align:center;">
+          <p>Learn about the impact your making!</p>
+        </v-card-actions>
+      </v-card>
+    </v-container>
+
+
+    <canvas id="canvas" width="100%%" height="50%" style="display:none;"/>
+    <video id="video" width="100%" height="50%" autoplay/>
+
+    <v-btn @click.native="process" block secondary dark>Click to Scan</v-btn>
+    <!--<v-icon left></v-icon> Analyze</v-btn>-->
+    <!--<h4 class="red--text">You should: {{resultText}} it!</h4>-->
+  </v-layout>
+  <!--
+  <v-layout row wrap>
     <v-flex xs12 sm12 md6 lg6 xl6>
       <v-card>
         <video id="video" width="100%" height="50%" autoplay></video>
-        <canvas id="canvas" width="600" height="480" style="background-color: blue;"></canvas>
-
-        <!--
-        <script>
-          //
-          // if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-          //   navigator.mediaDevices.getUserMedia({
-          //     video: true
-          //   }).then(stream => {
-          //     video.src = window.URL.createObjectURL(stream);
-          //     video.play();
-          //   });
-          // }
-        </script>
-        -->
       </v-card>
-      <v-btn @click.native="process" block secondary dark>
-        <v-icon left>camera_alt</v-icon> Analyze</v-btn>
+
+      <canvas id="canvas" width="200%" height="50%"></canvas>
+      <v-btn @click.native="process" block secondary dark>Analyze</v-btn>
+
     </v-flex>
     <v-flex xs12 sm12 md6 lg6 xl6>
       <h2 class="orange--text text-xs-center">Result</h2>
       <h4 class="red--text">You should: {{resultText}} it!</h4>
       <h4>I see...</h4>
-      <ul>
-        <h5 v-for
-      </ul>
     </v-flex>
   </v-layout>
+  -->
 </template>
 
 <script>
 
   //import $ from "jquery";
   import axios from 'axios';
+  import CustomLogo from "./CustomLogo";
   export default {
+    components: {CustomLogo},
     data(){
       return{
         loader: false,
