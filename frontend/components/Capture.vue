@@ -2,7 +2,6 @@
   <v-layout row wrap>
     <v-container grid-list-xl>
       <v-card>
-<!--        <stats />-->
         <div class="text-center">
           <canvas id="canvas" width="1280" height="960" style="display:none;"/>
           <video id="video" width="100%" height="50%" autoplay/>
@@ -13,13 +12,6 @@
               Scan Again
             </v-btn>
           </v-overlay>
-
-
-          <!--
-          <v-overlay :absolute="absolute" :value="overlay">
-            <InfoCard></InfoCard>
-          </v-overlay>
-          -->
         </div>
 
         <v-btn @click.native="process" color="primary" block>Click to Scan</v-btn>
@@ -65,8 +57,8 @@
         absolute: true,
         overlay: false,
         loader: false,
-        result: false,
-        resultText: null,
+        label: null,
+        action: null,
         data: {               //type vision api Request
           "requests": [{
             "features": [{
@@ -103,54 +95,19 @@
         const base64 = canvas.toDataURL();
         const finalImage = base64.replace("data:image/png;base64,", "");
 
-        /*
-        axios.post(`https://vision.googleapis.com/v1/images:annotate?key=AIzaSyDgcSJUpJdAJpR-BAPSEgJU8er57esot2w`,
-          this.data).then(response => {
-          console.log(response);
-        }).catch(error => {
-          console.log(error);
-        })
-        */
-
-
         axios.post(`https://vision.googleapis.com/v1/images:annotate?key=AIzaSyDgcSJUpJdAJpR-BAPSEgJU8er57esot2w`,
           this.data).then(response => {
 
-            const result = response.data.responses[0];
-            console.log(result);
+          const labels = response.data.responses[0].labelAnnotations;
+          console.log(labels);
 
-            //const [result] = await client.labelDetection('./resources/wakeupcat.jpg');
-            const labels = result.labelAnnotations;
-            console.log(labels);
-
-            axios.post('http://127.0.0.1:5000/image', {
-              payload: labels
-            }).then(action => {
-              console.log(action)
-              this.resultText = action.data;
-            })
-
-
-            /*
-            const result = response.data.responses[0];
-            console.log(result);
-            */
-          /*
-          const result = response.data.responses[0].faceAnnotations[0];
-
-          vm.anger = result.angerLikelihood;
-          vm.blur = result.blurredLikelihood;
-          vm.headwear = result.headwearLikelihood;
-          vm.joy = result.joyLikelihood;
-          vm.sorrow = result.sorrowLikelihood;
-          vm.surprised = result.surpriseLikelihood;
-          vm.confidence = this.confidenceInt(result.detectionConfidence);
-          vm.loader = false;
-          vm.result = true;
-*/
-
-
-
+          axios.post('http://127.0.0.1:5000/image', {
+            payload: labels
+          }).then(processedJSON => {
+            console.log(processedJSON.data)
+            this.label = processedJSON.data[0];
+            this.action = processedJSON.data[1];
+          })
 
         }).catch(error => {
           console.log(error);
